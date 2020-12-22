@@ -19,5 +19,7 @@ public class PlayerController : MonoBehaviour
     private void OnDestroy()
     {
         SceneManager.LoadScene(0);
+
+        Debug.Log("Oh no you lose");
     }
 }

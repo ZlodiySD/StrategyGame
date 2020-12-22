@@ -337,11 +337,6 @@ public class GameController : MonoBehaviour
             {
                 Debug.Log("Hurray you win");
             }
-            else if (castlesList.Length >= 1 && goPlayer == null)
-            {
-                Debug.Log("Oh no you lose");
-            }
-
         }
     }
 
