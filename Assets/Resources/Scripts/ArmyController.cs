@@ -103,17 +103,6 @@ public class ArmyController : MonoBehaviour
         army.ForEach(x => Debug.Log(x.unitInfo.name + " " + x.count));
     }
 
-    //public void UpdateArmyInfo(UnitInfo unitInfo, int count)
-    //{
-    //    if (armyInfo.Count != 0 && armyInfo.Exists(x => x.unitInfo.name == unitInfo.name))
-    //    {
-    //        armyInfo.Find(x => x.unitInfo.name == unitInfo.name).count += count;
-    //    }
-    //    else
-    //        armyInfo.Add(new ArmyData(unitInfo, count, ownerId));
-    //    CalculateArmySpeed();
-    //}
-
     public void UpdateArmyInfo(ArmyData data)
     {
         data.ownerId = ownerId;
@@ -205,7 +194,6 @@ public class ArmyController : MonoBehaviour
         {
             if(castle.ownerId == ownerId)
             {
-                //homeCastle.castleArmy.UpdateArmyInfo(armyInfo);
                 Debug.Log(armyInfo.Count);
                 homeCastle.castleArmy.UpdateArmyInfo(armyInfo, false);
                 homeCastle.coinsCurrent += CarriedCoins;

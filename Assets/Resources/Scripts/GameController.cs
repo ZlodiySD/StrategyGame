@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
@@ -84,7 +85,6 @@ public class GameController : MonoBehaviour
         if (GameController.insnatce == null)
         {
             insnatce = this;
-            //DontDestroyOnLoad(this);
         }
         turnOrderList = new List<GameObject>();
         m_Raycaster = FindObjectOfType<GraphicRaycaster>();
@@ -120,10 +120,6 @@ public class GameController : MonoBehaviour
                 ClickDetector();
             }
         }
-        if (Input.GetMouseButtonDown(3))
-        {
-            EndTurn();
-        }
         CameraMove();
     }
 
@@ -153,7 +149,6 @@ public class GameController : MonoBehaviour
                 HideArmyMoveZone();
             }
         }
-        //Debug.Log(grid.GetValue(ExtensionClass.GetMouseWorldPosition()));
     }
 
     /// <summary>
@@ -326,8 +321,7 @@ public class GameController : MonoBehaviour
         Debug.LogError("Oops< somethings goes wrong in CreateAmry()");
         return null;
     }
-
-    //сделать проверку на это во время конца действия атаки или движения
+    
     private void CheckGameOver()
     {
         Castle[] castlesList = FindObjectsOfType<Castle>();
@@ -335,6 +329,7 @@ public class GameController : MonoBehaviour
         {
             if(goPlayer != null && castlesList.Length == 1)
             {
+                SceneManager.LoadScene(0);
                 Debug.Log("Hurray you win");
             }
         }

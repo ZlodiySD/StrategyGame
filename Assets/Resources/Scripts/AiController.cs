@@ -41,11 +41,6 @@ public class AiController : MonoBehaviour
 
     IEnumerator ChoiceAction()
     {
-        //if (!ChoiceBuildingToBuy() ||)
-        //{
-        //    GameController.Insnatce.EndTurn();
-        //    return;
-        //}
         yield return new WaitForEndOfFrame();
         if(aggressionBehavior + Random.Range(0,50) > 45)
         {

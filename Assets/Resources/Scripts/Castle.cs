@@ -152,22 +152,4 @@ public class Castle : MonoBehaviour
     {
         ownAmryList.Remove(army);
     }
-
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(1) && ownerId == 1)
-        {
-            //ArmyData a = new ArmyData(GameController.Insnatce.unitsInfo[3], 0, 0);
-            ////Debug.Log("CastleArmy");
-            ////castleArmy.armyInfo.ForEach(x => Debug.Log(x.unitInfo.name + " " + x.count));
-            //Debug.Log(a.UnitTrainTime);
-            //a.UnitTrainTime -= 1;
-            //Debug.Log(a.UnitTrainTime);
-
-        }
-        if (Input.GetMouseButtonDown(2) && ownerId == 1)
-        {
-            Debug.Log(castleArmy.armyInfo.Count);
-        }
-    }
 }

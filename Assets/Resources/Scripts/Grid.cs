@@ -24,9 +24,6 @@ public class Grid: MonoBehaviour
 
     public void GetXY(Vector3 worldPosition, out int x, out int y)
     {
-        //x = Mathf.FloorToInt((worldPosition).x / cellSize);
-        //y = Mathf.FloorToInt((worldPosition).y / cellSize);
-
         x = Mathf.RoundToInt(worldPosition.x);
         y = Mathf.RoundToInt(worldPosition.y);
     }

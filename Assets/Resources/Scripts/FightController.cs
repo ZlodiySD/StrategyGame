@@ -91,8 +91,6 @@ public class FightController
                 tempAtckList.RemoveAt(0);
             }
         }
-        //attackOrderList.ForEach(x => Debug.Log("Unit name: " + x.unitInfo.name + " || Initiative: " + x.unitInfo.initiative + " || Owner: " + x.ownerId + " || Count: " + x.count));
-
 
         StartFight();
     }
